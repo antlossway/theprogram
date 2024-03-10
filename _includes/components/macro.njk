@@ -1,10 +1,12 @@
-{% macro hero(logoPath,logoAlt, title, text, otherClasses) %}
+{% macro hero(logoPath,logoAlt, title, text) %}
 <div class="grid place-content-center">
-    <figure class="flex flex-col items-center gap-6">
+    <figure class="flex flex-col items-center gap-6 mb-4">
         <img src={{logoPath}} alt={{logoAlt}}
-        width="130" height="130">
+        width="200" height="200">
         </figure>
-    <h1 class="h1 text-center">{{title}}</h1>
-    <p class="text-center">{{text}}</p>
+        {% if title !== undefined %}
+    <h1 class="h1 text-center mb-2">{{title}}</h1>
+    {% endif %}
+    <p class="text-center text-xl">{{text}}</p>
 </div>
 {% endmacro %}

@@ -15,6 +15,10 @@ module.exports = {
           DEFAULT: "hsl(32 21% 14%)",
           dark: "hsl(36 10% 80%)",
         },
+        link: {
+          DEFAULT: "hsl(1 76% 32%)",
+          // dark: "hsl(32 100% 80%)",
+        },
       },
       listStyleType: {
         square: "square",

@@ -1,21 +1,24 @@
 ---
 pagination:
   data: posts
-  size: 20
+  size: 30
 layout: 'layouts/layout.njk'
 title: Latest Posts
 url: home
 ---
-<div class=" grid place-content-center mt-10 mx-auto px-4   ">
+<div class=" grid place-content-center mt-10 mx-auto px-4 mb-10  ">
        {# <h1 class="h1 mb-4" >The Program</h1> #}
        {% include 'components/_hero-home.njk' %}
 <ul class="mt-10 list-roman px-2 ml-6">
-  {%- for item in pagination.items %}
+  {%- for item in pagination.items | reverse %}
+  {# already filtered on posts.js to remove the summary post #}
+    {# {% if item.slug !== 'programme-dun-candidat-libertarien-sommaire' %} #}
     <li class="mt-2">
       <a href="/posts/{{ item.title.rendered | slug }} " class="ml-1 hover:underline" >
         {{ item.title.rendered | safe}}
     </a>
     </li>
+    {# {% endif %} #}
   {% endfor -%}
 </ul>
 <div>
