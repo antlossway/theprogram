@@ -1,16 +1,6 @@
 // fetch data from wordpress
 const fetch = require("node-fetch")
 
-function changeContent(post) {
-  return {
-    ...post,
-    // content: content,
-    // content: post?.content.rendered,
-    // content: post.content.rendered.replace(process.env.WP_SITE_URL, "")
-    // content: post.content.rendered,
-  }
-}
-
 module.exports = async function () {
   console.log("Fetching data...")
 
@@ -35,10 +25,6 @@ module.exports = async function () {
     (item) => !item.slug.includes("programme-dun-candidat-libertarien-sommaire")
   )
   return filteredData
-  // const posts = data.map((post) => changeContent(post))
-  // console.log(posts)
-  // return posts
-  // return data
 
   // return content.replace(regexObj, "")
   // return data
