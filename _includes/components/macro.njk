@@ -1,0 +1,10 @@
+{% macro hero(logoPath,logoAlt, title, text, otherClasses) %}
+<div class="grid place-content-center">
+    <figure class="flex flex-col items-center gap-6">
+        <img src={{logoPath}} alt={{logoAlt}}
+        width="130" height="130">
+        </figure>
+    <h1 class="h1 text-center">{{title}}</h1>
+    <p class="text-center">{{text}}</p>
+</div>
+{% endmacro %}

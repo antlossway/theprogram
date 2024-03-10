@@ -1,0 +1,25 @@
+---
+pagination:
+    data: posts
+    size: 1
+    alias: posts
+permalink: "posts/{{ posts.title.rendered | slug  }}/"
+layout: 'layouts/layout.njk'
+---
+<article class="mx-auto p-6 sm:px-10 prose prose-base md:prose-lg prose-slate
+       dark:prose-invert prose-a:text-blue-500 prose-a:no-underline hover:prose-a:underline">
+    <h1 class="capitalize">{{ posts.title.rendered | safe}}</h1>
+
+    <div class="">
+        {{posts.content.rendered | removeWpEmbedUrl| safe}}
+    </div>
+</article>
+
+<div class="w-full mx-auto grid place-content-center">
+
+{% include 'components/_pagination.njk' %}
+</div>
+
+{# template for single post, the URL to each post will be at /posts/slug #}
+{# |slug filter is to slugify the url #}
+{# |safe filter is to render out the HTML we get back from WP REST API #}

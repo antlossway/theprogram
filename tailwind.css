@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Volume";
+    src: url("/assets/fonts/Volume_TC_Regular.otf");
+  }
+
+  .ul {
+    marker: none;
+    list-style-type: none !important;
+  }
+
+  .h1 {
+    @apply text-4xl font-semibold font-volume;
+  }
+}
+
+@layer utilities {
+  .debug {
+    @apply border border-red-500;
+  }
+}

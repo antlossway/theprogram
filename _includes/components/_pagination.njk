@@ -1,0 +1,16 @@
+{# pagination #}
+<nav class="w-full">
+  <ul class="w-full flex gap-20">
+    <li>
+      {% if pagination.href.previous %}
+        <a href="{{ pagination.href.previous }}" class="hover:underline">Previous</a>
+      {% else %}{% endif %}
+    </li>
+
+    <li>
+      {% if pagination.href.next %}
+        <a href="{{ pagination.href.next }}" class="hover:underline">Next</a>
+      {% else %}{% endif %}
+    </li>
+  </ul>
+</nav>

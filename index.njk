@@ -1,0 +1,22 @@
+---
+pagination:
+  data: posts
+  size: 20
+layout: 'layouts/layout.njk'
+title: Latest Posts
+url: home
+---
+<div class=" grid place-content-center mt-10 mx-auto px-20   ">
+       {# <h1 class="h1 mb-4" >The Program</h1> #}
+       {% include 'components/_hero-home.njk' %}
+<ul class="mt-10 list-roman">
+  {%- for item in pagination.items %}
+    <li class="mt-2">
+      <a href="/posts/{{ item.title.rendered | slug }} " class="ml-1 hover:underline" >
+        {{ item.title.rendered | safe}}
+    </a>
+    </li>
+  {% endfor -%}
+</ul>
+<div>
+
