@@ -3,7 +3,7 @@ pagination:
     data: posts
     size: 1
     alias: posts
-permalink: "posts/{{ posts.title.rendered | slug  }}/"
+permalink: "posts/{{ posts.title.rendered | slug | safe  }}/"
 layout: 'layouts/article.njk'
 ---
 {% include 'components/_backHome.njk' %}

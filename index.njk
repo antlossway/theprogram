@@ -3,11 +3,10 @@ pagination:
   data: posts
   size: 30
 layout: 'layouts/layout.njk'
-title: Latest Posts
+title: "liberté Programme"
 url: home
 ---
 <div class=" grid place-content-center mt-10 mx-auto px-4 mb-10  ">
-       {# <h1 class="h1 mb-4" >The Program</h1> #}
        {% include 'components/_hero-home.njk' %}
 <ul class="mt-8 py-2 list-roman pl-10 px-2 ">
   {%- for item in pagination.items | reverse %}

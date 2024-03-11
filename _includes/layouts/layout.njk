@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="/css/styles.css" />
     <script async src="https://stats.hello-vpn.com/script.js" data-website-id="c699efc9-d584-40d5-8ce4-dcf415b3e08d"></script>
-    <title>{{ posts.title.rendered }}</title>
+    {# <title>{{ posts.title.rendered | safe }}</title> #}
+    <title> {{ title }} </title>
   </head>
   <body class="min-h-screen flex flex-col bg-body dark:bg-black/80 font-volume text-primary dark:text-primary-dark " >
   {# {% include 'components/_header.njk' %} #}

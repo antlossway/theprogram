@@ -6,6 +6,7 @@ module.exports = function (eleventyConfig) {
   // Output directory: _site
   //   eleventyConfig.addPassthroughCopy("./style.css")
   eleventyConfig.addPassthroughCopy("assets")
+  eleventyConfig.addPassthroughCopy({ "assets/favicon": "/" })
 
   eleventyConfig.addFilter("removeWpEmbedUrl", (content) => {
     // remove the program summary embed from posts
