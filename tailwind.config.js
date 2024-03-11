@@ -5,6 +5,8 @@ module.exports = {
     extend: {
       fontFamily: {
         volume: ["Volume", "sans-serif"],
+        "volume-sans": ["Volume Sans", "sans-serif"],
+        "volume-italic": ["Volume Italic", "sans-serif", "italic"],
       },
       colors: {
         body: {
@@ -17,6 +19,7 @@ module.exports = {
         },
         link: {
           DEFAULT: "hsl(1 76% 32%)",
+          dark: "hsl(1 56% 40%)",
           // dark: "hsl(32 100% 80%)",
         },
       },

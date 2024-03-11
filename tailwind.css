@@ -7,14 +7,17 @@
     font-family: "Volume";
     src: url("/assets/fonts/Volume_TC_Regular.otf");
   }
-
-  .ul {
-    marker: none;
-    list-style-type: none !important;
+  @font-face {
+    font-family: "Volume Italic";
+    src: url("/assets/fonts/Volume_TC_Italic.otf");
+  }
+  @font-face {
+    font-family: "Volume Sans";
+    src: url("/assets/fonts/Volume_TC_Sans.otf");
   }
 
   .h1 {
-    @apply text-4xl font-semibold font-volume;
+    @apply text-4xl font-semibold font-volume dark:text-white/95;
   }
 }
 

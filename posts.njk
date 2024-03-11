@@ -13,17 +13,16 @@ layout: 'layouts/article.njk'
 
     <h1 class="capitalize">{{ posts.title.rendered | safe}}</h1>
 
+{# on wordpress, single post has embed link to the summary post, here need to remove this link #}
     <div class="">
         {{posts.content.rendered | removeWpEmbedUrl| safe}}
     </div>
 </article>
 
 <div class="w-full mx-auto grid place-content-center">
-
 {% include 'components/_pagination.njk' %}
-
-
 </div>
+
 {% include 'components/_backHome.njk' %}
 
 {# template for single post, the URL to each post will be at /posts/slug #}
