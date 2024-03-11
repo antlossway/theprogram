@@ -18,7 +18,12 @@ module.exports = async function () {
   // .then((json) => console.log(json)) // for debugging
 
   const res = await fetch(
-    `${process.env.WP_REST_API_URL}?_fields=id,title,slug,content&categories[0]=18&per_page=20`
+    `${process.env.WP_REST_API_URL}?_fields=id,title,slug,content&categories[0]=18&per_page=20`,
+    {
+      headers: {
+        Authorization: `Basic ${process.env.WP_BASIC_AUTH}`,
+      },
+    }
   )
   const data = await res.json()
   const filteredData = data.filter(
