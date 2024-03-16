@@ -20,5 +20,13 @@ module.exports = function (eleventyConfig) {
     return modifiedContent
   })
 
+  // does not work "eleventyConfig.addJavascriptFunction is not a function"
+  // eleventyConfig.addJavascriptFunction("getCurrentYear", function () {
+  //   return new Date().getFullYear()
+  // })
+  eleventyConfig.addGlobalData("getCurrentYear", () => {
+    return new Date().getFullYear()
+  })
+
   require("dotenv").config()
 }
