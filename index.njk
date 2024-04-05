@@ -6,8 +6,18 @@ layout: 'layouts/layout.njk'
 title: "liberté Programme"
 url: home
 ---
+{# header of index page with image,title, and subtitle #}
 <div class=" grid place-content-center mt-10 mx-auto px-4 mb-10  ">
-       {% include 'components/_hero-home.njk' %}
+       {# {% include 'components/_hero-home.njk' %} #}
+       <div class="grid place-content-center">
+        <figure class="flex flex-col items-center gap-6 mb-4">
+          <img src="assets/img/white_boy_on_horse.png" alt="boy on a horse" width="200" height="200" class="hidden dark:block opacity-80">
+          <img src="assets/img/black_boy_on_horse.png" alt="boy on a horse" width="200" height="200" class="dark:hidden">
+        </figure>
+        <h1 class="h1 text-center mb-2">Programme d’un Candidat Libertarien</h1>
+        <p class="text-center text-xl dark:text-white/80">pour une société meilleure</p>
+
+</div>
 <ul class="mt-8 py-2 list-roman pl-10 px-2 ">
   {%- for item in pagination.items | reverse %}
   {# already filtered on posts.js to remove the summary post #}
